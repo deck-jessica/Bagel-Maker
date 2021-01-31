@@ -16,7 +16,7 @@
 <ul>
   {{#each bagels}}
     {{#if devoured}}
-      {{> bagel-block devoured=true}}
+      {{bagel_name}}
     {{/if}}
   {{/each}}
 </ul>
@@ -26,7 +26,7 @@
 
   <div class="form-group">
     <label for="newBagel">Bagel Name</label>
-    <input type="text" id="newBagel" name="bagel_name">
+    <input type="text" id="newBagel" name="bagel_name"></input>
   </div>
 
   <button id="newBagel-submit" type="submit">Add Bagel</button>

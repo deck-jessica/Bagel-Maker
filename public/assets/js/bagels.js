@@ -1,6 +1,8 @@
 
 $(function() {
     $(".devour-bagel").on("click", function(event) {
+        event.preventDefault();
+
       var id = $(this).data("id");
       
   
@@ -26,7 +28,7 @@ $(function() {
       event.preventDefault();
   
       var newBagel = {
-        name: $("#newBagel").val().trim(),
+        bagel_name: $("#newBagel").val().trim(),
         devoured: false
       };
   
