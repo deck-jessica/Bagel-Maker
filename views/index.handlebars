@@ -5,7 +5,7 @@
 <ul>
   {{#each bagels}}
     {{#unless devoured}}
-      {{id}} - {{bagelname}}
+      {{id}} . {{bagel_name}}
       <button id="devour-bagel" class="devour-bagel" data-id="{{this.id}}">Devour Bagel!</button>
     {{/unless}}
   {{/each}}
@@ -16,7 +16,7 @@
 <ul>
   {{#each bagels}}
     {{#if devoured}}
-      {{bagelname}}
+      {{> bagel-block devoured=true}}
     {{/if}}
   {{/each}}
 </ul>
@@ -26,7 +26,7 @@
 
   <div class="form-group">
     <label for="newBagel">Bagel Name</label>
-    <input type="text" id="newBagel" name="bagelname">
+    <input type="text" id="newBagel" name="bagel_name">
   </div>
 
   <button id="newBagel-submit" type="submit">Add Bagel</button>

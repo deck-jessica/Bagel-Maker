@@ -14,7 +14,7 @@ function printQuestionMarks(num) {
   function objToSql(ob) {
     var arr = [];
   
-    // loop through the keys and push the key/value as a string int arr
+    // loop through the keys and push the key/value as a string into array
     for (var key in ob) {
       var value = ob[key];
       
@@ -42,14 +42,14 @@ var orm = {
             cb(result);
           });
     },
-    insertOne: function(table, cols, vals, cb) {
-        var queryString = "INSERT INTO " + table;
+    insertOne: function(tableName, columns, values, cb) {
+        var queryString = "INSERT INTO " + tableName;
     
         queryString += " (";
-        queryString += cols.toString();
+        queryString += columns.toString();
         queryString += ") ";
         queryString += "VALUES (";
-        queryString += printQuestionMarks(vals.length);
+        queryString += printQuestionMarks(values.length);
         queryString += ") ";
     
         console.log(queryString);
@@ -62,8 +62,10 @@ var orm = {
           cb(result);
         });
       },
-      update: function(table, objColVals, condition, cb) {
-        var queryString = "UPDATE " + table;
+      // function to update(eat) bagels. sets up mySQL query using update of CRUD methodology
+      // have to set up statement to include question marks depending on 
+      updateOne: function(tableName, objColVals, condition, cb) {
+        var queryString = "UPDATE " + tableName;
     
         queryString += " SET ";
         queryString += objToSql(objColVals);
