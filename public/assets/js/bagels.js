@@ -21,12 +21,12 @@ $(function() {
       );
     });
   
-    $(".newBagel-submit").on("submit", function(event) {
+    $(".newBagel-form").on("submit", function(event) {
     
       event.preventDefault();
   
       var newBagel = {
-        bagel_name: $("#newBagel").val().trim(),
+        name: $("#newBagel").val().trim(),
         devoured: false
       };
   

@@ -6,8 +6,8 @@ var bagel = {
           cb(res);
         });
       },
-      insertOne: function(cols, vals, cb) {
-        orm.insertOne("bagels", cols, vals, function(res) {
+      insertOne: function(columns, values, cb) {
+        orm.insertOne("bagels", columns, values, function(res) {
           cb(res);
         });
       },

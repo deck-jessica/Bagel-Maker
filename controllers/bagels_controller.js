@@ -1,8 +1,5 @@
 var express = require("express");
-
 var router = express.Router();
-
-// Import the model (cat.js) to use its database functions.
 var bagel = require("../models/bagel.js");
 
 router.get("/", function(req, res) {
@@ -16,11 +13,9 @@ router.get("/", function(req, res) {
   });
   
   router.post("/api/bagels", function(req, res) {
-    bagel.createOne([
-      "name", "devoured"
-    ], [
-      req.body.name, req.body.devoured
-    ], function(result) {
+    bagel.insertOne(
+      "bagel_name", 
+     [req.body.bagel_name], function(result) {
       // Send back the ID of the new quote
       res.json({ id: result.insertId });
     });
