@@ -1,0 +1,33 @@
+<h1>Bagels</h1>
+
+<h2>Bagels to Eat</h2>
+
+<ul>
+  {{#each bagels}}
+    {{#unless devoured}}
+      {{id}} - {{bagelname}}
+      <button id="devour-bagel" class="devour-bagel" data-id="{{this.id}}">Devour Bagel!</button>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Devoured Bagels</h2>
+
+<ul>
+  {{#each bagels}}
+    {{#if devoured}}
+      {{bagelname}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Bagel</h2>
+<form class="newBagel-form">
+
+  <div class="form-group">
+    <label for="newBagel">Bagel Name</label>
+    <input type="text" id="newBagel" name="bagelname">
+  </div>
+
+  <button id="newBagel-submit" type="submit">Add Bagel</button>
+</form>

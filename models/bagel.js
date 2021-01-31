@@ -11,7 +11,7 @@ var bagel = {
           cb(res);
         });
       },
-      update: function(objColVals, condition, cb) {
+      updateOne: function(objColVals, condition, cb) {
         orm.update("bagels", objColVals, condition, function(res) {
           cb(res);
         });

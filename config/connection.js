@@ -1,11 +1,13 @@
 // Set up MySQL connection to Node
 var mysql = require("mysql");
 
-var connection = mysql.createConnection({
+var connection = mysql.createConnection(
+  process.env.JAWSDB_url ||   
+    {
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "",
+  password: process.env.MY_PWD,
   database: "bagels_db"
 });
 
