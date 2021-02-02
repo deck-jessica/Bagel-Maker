@@ -1,4 +1,4 @@
-var orm = require("../config/orm.js");
+const orm = require("../config/orm.js");
 
 var bagel = {
     selectAll: function(cb) {
