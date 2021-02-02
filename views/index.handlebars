@@ -5,8 +5,10 @@
 <ul>
   {{#each bagels}}
     {{#unless devoured}}
+    <p>
       {{id}} . {{bagel_name}}
       <button id="devour-bagel" class="devour-bagel" data-id="{{this.id}}">Devour Bagel!</button>
+    </p>
     {{/unless}}
   {{/each}}
 </ul>
@@ -16,7 +18,9 @@
 <ul>
   {{#each bagels}}
     {{#if devoured}}
+    <p>
       {{bagel_name}}
+    </p>
     {{/if}}
   {{/each}}
 </ul>
