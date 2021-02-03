@@ -4,4 +4,14 @@
 
 body {
 font-family: 'Big Shoulders Display', cursive;
+background-image: url("../img/bagelsammy.jpg");
+background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.newBagel-form {
+ display: grid;
+ width: 65%;
 }
