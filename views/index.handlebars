@@ -1,7 +1,9 @@
-<h1>Bagels</h1>
+<div class="container">
+<header><h1>Bagels</h1></header>
 
+<div>
 <h2>Bagels to Eat</h2>
-
+<div>
 <ul>
   {{#each bagels}}
     {{#unless devoured}}
@@ -12,9 +14,12 @@
     {{/unless}}
   {{/each}}
 </ul>
+</div>
+</div>
 
+<div>
 <h2>Devoured Bagels</h2>
-
+<div>
 <ul>
   {{#each bagels}}
     {{#if devoured}}
@@ -24,8 +29,12 @@
     {{/if}}
   {{/each}}
 </ul>
+</div>
+</div>
 
-<h2>Add a Bagel</h2>
+<div>
+<h2>Add a Bagel</h2> </div>
+<div>
 <form class="newBagel-form">
 
   <div class="form-group">
@@ -35,3 +44,5 @@
 
   <button id="newBagel-submit" type="submit">Add Bagel</button>
 </form>
+</div>
+</div>
